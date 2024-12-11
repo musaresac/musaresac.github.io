@@ -41,33 +41,7 @@ header {
     font-weight: 700;
 }
 
-/* Estilos responsivos para dispositivos moviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .navbar a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .navbar a:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Estilos de la seccion main */
+/* Estilos de la Seccion Main */
 main {
     padding: 2rem;
 }
@@ -97,6 +71,41 @@ section:hover {
     transition: all 0.3s ease; 
 }
 
+/* Estilos de la Seccion Destacado */
+.destacado video {
+    max-width: 300px;
+    width: 100%; 
+    height: auto; 
+}
+
+/* Estilos de la Seccion Galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-auto-rows: 1fr;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos del Footer */
 footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
@@ -106,7 +115,6 @@ footer {
     color: #FFFFFF;
 }
 
-/* Estilos del Footer */
 footer .social-links {
     display: flex;
     justify-content: center; 
@@ -136,29 +144,28 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Estilos de la Seccion Galeria */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-    grid-auto-rows: 1fr;
-}
+/* Estilos responsivos para dispositivos moviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
-.gallery-item img:hover {
-    transform: scale(1.1);
+    .navbar a:last-child {
+        border-bottom: none;
+    }
 }
