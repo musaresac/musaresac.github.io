@@ -1,3 +1,12 @@
+<!--
+     Ideas futuras de implementacion:
+     - Una seccion con informacion para donar a la asociacion
+     - Una seccion con el contenido mas reciente de IG
+     - Una seccion con el contenido mas reciente de FB
+     - Una seccion con el contenido mas reciente de X / Twitter
+     - Una seccion con el contenido mas reciente de YT
+     (secciones de redes sociales sujeto a que red social publica mas activamente)
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,18 +21,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- JS -->
+    <script src="scripts.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagenes/favicon.png">
 </head>
 <body>
 
     <!-- Barra de Navegacion -->
-    <header class="header">
-        <div class="logo-container">
+    <header>
+        <div>
             <img src="imagenes/musares-logo.png" alt="Logo Musares" class="logo">
         </div>
         <nav class="navbar">
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
                 <li><a href="#destacado">Destacado</a></li>
@@ -35,13 +46,13 @@
 
     <main>
         <!-- Seccion Inicio -->
-        <section id="inicio" class="inicio">
+        <section id="inicio">
             <h1>Bienvenidos a Musares</h1>
             <p>Celebrando el arte y la cultura y procurando el bienestar de los artistas mediante festivales, eventos, talleres y cursos.</p>
         </section>
 
         <!-- Seccion Quienes Somos -->
-        <section id="quienes-somos" class="quienes-somos">
+        <section id="quienes-somos">
             <h2>¿Quiénes Somos?</h2>
             <p>Músicos y Artistas a Escena Musares A.C. es una asociación dedicada a promover la cultura, el arte y la música para crear un impacto positivo en la sociedad.</p>
             <p>Buscamos ser el puente entre los artistas y las oportunidades que les permitan crecer y prosperar en su carrera artística.</p>
@@ -61,27 +72,23 @@
         </section>
 
         <!-- Seccion Galeria -->
-        <section id="galeria" class="galeria">
+        <section id="galeria">
             <h2>Galería</h2>
             <p>Explora momentos destacados de nuestras actividades y eventos.</p>
-            <div class="gallery">
-                <div class="gallery-item"><img src="imagenes/evento1.jpg" alt="Evento 1"></div>
-                <div class="gallery-item"><img src="imagenes/evento2.jpg" alt="Evento 2"></div>
-                <div class="gallery-item"><img src="imagenes/evento3.jpg" alt="Evento 3"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <!-- test de mas imagenes en galeria -->
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
-                <div class="gallery-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
+            <div class="carousel">
+                <button class="carousel-btn prev">&lt;</button>
+                <div class="carousel-track">
+                    <div class="carousel-item"><img src="imagenes/evento1.jpg" alt="Evento 1"></div>
+                    <div class="carousel-item"><img src="imagenes/evento2.jpg" alt="Evento 2"></div>
+                    <div class="carousel-item"><img src="imagenes/evento3.jpg" alt="Evento 3"></div>
+                    <div class="carousel-item"><img src="imagenes/evento4.jpg" alt="Evento 4"></div>
+                </div>
+                <button class="carousel-btn next">&gt;</button>
             </div>
         </section>
 
         <!-- Seccion Contacto -->
-        <section id="contacto" class="contacto">
+        <section id="contacto">
             <h2>Contacto</h2>
             <p>¡Ponte en contacto con nosotros para colaborar o saber más!</p>
             <p>WhatsApp: 221 278 2128</p>
