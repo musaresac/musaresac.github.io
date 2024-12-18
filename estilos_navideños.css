@@ -1,0 +1,202 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #F5F5F5, #E6E6FA);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #228B22;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #B22222;
+    color: #FFFFFF;
+}
+
+.logo {
+    max-height: 75px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Estilos de la Seccion Main */
+main {
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px #FFD700;
+    font-weight: 700;
+    color: #DC143C;
+}
+
+p, a, li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+}
+
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); 
+    transition: all 0.3s ease; 
+}
+
+/* Estilos de la Seccion Destacado */
+.destacado video {
+    max-width: 300px;
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+}
+
+/* Estilos de la Seccion Galeria */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    height: 100%;
+    margin-left: 0;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos del Footer */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #B22222; 
+    color: #FFFFFF;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 1rem;
+}
+
+footer .social-links a {
+    color: #FFFFFF;
+    font-size: 1.5rem; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    text-decoration: none; 
+}
+
+footer .social-links a:hover {
+    color: #FFC107; 
+    transform: scale(1.2); 
+}
+
+footer .social-links a:focus {
+    outline: 2px solid #FFC107; 
+    outline-offset: 4px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Estilos responsivos para dispositivos moviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+}
